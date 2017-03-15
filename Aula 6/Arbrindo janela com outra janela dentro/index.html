@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="jas.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#teste').click(function(){
+					//endereço da janela, nome da janela, estilo
+					//podemos abrir outra janela sem ter q sair da página colocando o endereço:
+					// var janela = window.open('clientes.html','meuBuscador','width=300px, height=300px');
+					var janela = window.open('','meuBuscador','width=300px, height=300px');
+					//podemos criar uma página dentro dessa janela
+					janela.document.write('<html> <body> <h1>E O CÚ????? </h1></body> </html>');
+
+
+					//pegando tamanho disponível da tela (descontando a barra de cima do navegador) 
+					var altura = window.screen.availHeight;
+					var largura = window.screen.availWidth;
+					alert( largura + " x" + altura);
+					//pegando tamanho total da tela 
+					var altura2 = window.screen.height;
+					var largura2 = window.screen.width;
+					alert( largura2 + " x" + altura2);
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		
+		<button id="teste">teste</button>
+	</body>
+</html>		
